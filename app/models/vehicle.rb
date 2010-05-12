@@ -19,11 +19,18 @@ class Vehicle < ActiveRecord::Base
     data = {} unless data.is_a?(Hash)
 
     # convert to xml <hash>...</hash>
-    self[:metadata] = data.to_xml
+    self[:metadata] = data.to_xml(:dasherize => false)
   end
   
   # retrieve the xml, convert it to a hash, and return it
   def metadata
     Hash.from_xml(self[:metadata])['hash']
+  end
+  
+  def find_with_price_under(_price)
+    @vehicles = Vehicle.find_by_sql(
+      "SELECT *, CAST(ExtractValue(metadata, '/hash/sticker_information/price') AS SIGNED) AS price
+      FROM vehicles
+      HAVING price < #{_price}")
   end
 end
