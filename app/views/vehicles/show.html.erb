@@ -1,0 +1,34 @@
+<p>
+  <b>Type:</b>
+  <%=h @vehicle.type %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%=h @vehicle.color %>
+</p>
+
+<p>
+  <b>Seat count:</b>
+  <%=h @vehicle.seat_count %>
+</p>
+
+<h2>Sticker Information</h2>
+<p>
+  <b>Price:</b>
+  <%=h @vehicle.metadata["sticker_information"]["price"] %>
+</p>
+
+<p>
+  <b>Gas Mileage in the City:</b>
+  <%=h @vehicle.metadata["sticker_information"]["gas_mileage"]["city"] %>
+</p>
+
+<p>
+  <b>Gas Mileage on the Highway:</b>
+  <%=h @vehicle.metadata["sticker_information"]["gas_mileage"]["highway"] %>
+</p>
+
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

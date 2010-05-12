@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type: MyString
+  color: MyString
+  seat_count: 1
+  metadata: MyText
+
+two:
+  type: MyString
+  color: MyString
+  seat_count: 1
+  metadata: MyText

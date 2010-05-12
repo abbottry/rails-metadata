@@ -1,0 +1,25 @@
+<h1>Listing vehicles</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Color</th>
+    <th>Seat count</th>
+    <th>Metadata</th>
+  </tr>
+
+<% @vehicles.each do |vehicle| %>
+  <tr>
+    <td><%=h vehicle.type %></td>
+    <td><%=h vehicle.color %></td>
+    <td><%=h vehicle.seat_count %></td>
+    <td><%= link_to 'Show', vehicle_path(vehicle) %></td>
+    <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+    <td><%= link_to 'Destroy', vehicle_path(vehicle), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New vehicle', new_vehicle_path %>

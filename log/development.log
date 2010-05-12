@@ -1,0 +1,1754 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (304.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (348.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateVehicles (20100509203057)
+  [4;35;1mSQL (114.4ms)[0m   [0mCREATE TABLE `vehicles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `color` varchar(255), `seat_count` int(11), `metadata` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (24.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100509203057')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mSQL (19.6ms)[0m   [0mdescribe `vehicles`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `vehicles`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:31:45) [GET]
+  [4;36;1mVehicle Load (0.4ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+Completed in 128ms (View: 108, DB: 1) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:31:48) [GET]
+  [4;35;1mVehicle Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 49ms (View: 28, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:33:36) [GET]
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 50ms (View: 29, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:33:48) [GET]
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 51ms (View: 30, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:35:44) [GET]
+  [4;36;1mVehicle Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 101ms (View: 80, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#create (for 127.0.0.1 at 2010-05-09 16:36:00) [POST]
+  Parameters: {"commit"=>"Create", "vehicle"=>{"seat_count"=>"2", "metadata"=>{"price"=>"12000", "gas_mileage"=>{"city"=>"15", "highway"=>"20"}}, "color"=>"Black", "vehicle_type"=>"Truck"}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0="}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVehicle Create (0.3ms)[0m   [0mINSERT INTO `vehicles` (`seat_count`, `created_at`, `updated_at`, `metadata`, `color`, `type`) VALUES(2, '2010-05-09 20:36:00', '2010-05-09 20:36:00', '--- !map:HashWithIndifferentAccess \nprice: \"12000\"\ngas_mileage: !map:HashWithIndifferentAccess \n city: \"15\"\n highway: \"20\"\n', 'Black', 'Truck')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/1
+Completed in 34ms (DB: 3) | 302 Found [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:36:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;35;1mTruck Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 51ms (View: 19, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:37:31) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #16 of app/views/vehicles/index.html.erb:
+13:     <td><%=h vehicle.type %></td>
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/models/vehicle.rb:27:in `metadata'
+    app/views/vehicles/index.html.erb:16
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (191.8ms)
+Rendered rescues/_request_and_response (2.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:38:47) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+Completed in 22ms (View: 3, DB: 1) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:38:48) [GET]
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 39ms (View: 19, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:40:17) [GET]
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 49ms (View: 29, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:41:10) [GET]
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 39ms (View: 18, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#create (for 127.0.0.1 at 2010-05-09 16:41:20) [POST]
+  Parameters: {"commit"=>"Create", "vehicle"=>{"seat_count"=>"2", "metadata"=>{"price"=>"12000", "gas_mileage"=>{"city"=>"15", "highway"=>"20"}}, "color"=>"Black", "vehicle_type"=>"Truck"}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0="}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVehicle Create (0.3ms)[0m   [0mINSERT INTO `vehicles` (`seat_count`, `created_at`, `updated_at`, `metadata`, `color`, `type`) VALUES(2, '2010-05-09 20:41:20', '2010-05-09 20:41:20', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n <price>12000</price>\n <gas-mileage>\n <city>15</city>\n <highway>20</highway>\n </gas-mileage>\n</hash>\n', 'Black', 'Truck')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/1
+Completed in 32ms (DB: 3) | 302 Found [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:41:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;35;1mTruck Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 57ms (View: 26, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:45:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x26fdf18>) on line #3 of app/views/vehicles/edit.html.erb:
+1: <h1>Editing vehicle</h1>
+2: 
+3: <% form_for(@vehicle) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/vehicles/edit.html.erb:3
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (174.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:46:03) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://rails-metadata.dev/vehicles/]
+  [4;36;1mSQL (3.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:46:05) [GET]
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 51ms (View: 31, DB: 5) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#create (for 127.0.0.1 at 2010-05-09 16:46:20) [POST]
+  Parameters: {"commit"=>"Create", "vehicle"=>{"seat_count"=>"2", "metadata"=>{"sticker_information"=>{"price"=>"12000", "gas_mileage"=>{"city"=>"15", "highway"=>"20"}}}, "color"=>"Black", "vehicle_type"=>"Truck"}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0="}
+  [4;35;1mVehicle Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVehicle Create (0.3ms)[0m   [0mINSERT INTO `vehicles` (`seat_count`, `created_at`, `updated_at`, `metadata`, `color`, `type`) VALUES(2, '2010-05-09 20:46:20', '2010-05-09 20:46:20', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n <sticker-information>\n <price>12000</price>\n <gas-mileage>\n <city>15</city>\n <highway>20</highway>\n </gas-mileage>\n </sticker-information>\n</hash>\n', 'Black', 'Truck')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/1
+Completed in 33ms (DB: 3) | 302 Found [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:46:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;35;1mTruck Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 84ms (View: 53, DB: 3) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:47:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;36;1mTruck Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 67ms (View: 36, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:48:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 86ms (View: 55, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:48:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;36;1mTruck Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 104ms (View: 73, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:48:36) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x288fdf4>) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (116.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:49:02) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x2701398>) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (183.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:49:15) [GET]
+  [4;36;1mVehicle Load (0.4ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x288c3ac>) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (121.6ms)
+Rendered rescues/_request_and_response (3.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:50:11) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (vehicle_url failed to generate from {:controller=>"vehicles", :action=>"show", :id=>nil}, expected: {:controller=>"vehicles", :action=>"show"}, diff: {:id=>nil}) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle_path(@vehicle) %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    (eval):16:in `vehicle_path'
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (121.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:50:53) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x2797fdc>) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (184.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:50:56) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x2862944>) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (116.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:51:07) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (vehicle_url failed to generate from {:controller=>"vehicles", :action=>"show", :id=>nil}, expected: {:controller=>"vehicles", :action=>"show"}, diff: {:id=>nil}) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle_path(@vehicle) %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    (eval):16:in `vehicle_path'
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (186.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:51:43) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (vehicle_url failed to generate from {:controller=>"vehicles", :action=>"show", :id=>nil}, expected: {:controller=>"vehicles", :action=>"show"}, diff: {:id=>nil}) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle_path(@vehicle) %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    (eval):16:in `vehicle_path'
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (119.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:51:58) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (vehicle_url failed to generate from {:controller=>"vehicles", :action=>"show", :id=>nil}, expected: {:controller=>"vehicles", :action=>"show"}, diff: {:id=>nil}) on line #17 of app/views/vehicles/index.html.erb:
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle_path(@vehicle) %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    (eval):16:in `vehicle_path'
+    app/views/vehicles/index.html.erb:17
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (119.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:53:17) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x26fa070>) on line #19 of app/views/vehicles/index.html.erb:
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle_path(vehicle) %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+21: <% end %>
+22: </table>
+
+    app/views/vehicles/index.html.erb:19
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (183.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:53:44) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x27b2f94>) on line #19 of app/views/vehicles/index.html.erb:
+16:     <td><%=h vehicle.metadata %></td>
+17:     <td><%= link_to 'Show', vehicle_path(vehicle) %></td>
+18:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+19:     <td><%= link_to 'Destroy', vehicle, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+21: <% end %>
+22: </table>
+
+    app/views/vehicles/index.html.erb:19
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:7:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (116.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:55:21) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 59ms (View: 27, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:55:33) [GET]
+  [4;36;1mVehicle Load (0.4ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 47ms (View: 16, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:55:42) [GET]
+  [4;36;1mVehicle Load (0.4ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mTruck Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 109ms (View: 77, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:55:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 113ms (View: 82, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:55:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;36;1mTruck Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x2560688>) on line #3 of app/views/vehicles/edit.html.erb:
+1: <h1>Editing vehicle</h1>
+2: 
+3: <% form_for(@vehicle) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/vehicles/edit.html.erb:3
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (175.8ms)
+Rendered rescues/_request_and_response (3.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:56:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;35;1mTruck Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x262c148>) on line #3 of app/views/vehicles/edit.html.erb:
+1: <h1>Editing vehicle</h1>
+2: 
+3: <% form_for(@vehicle) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/vehicles/edit.html.erb:3
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (105.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:56:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;36;1mTruck Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `truck_path' for #<ActionView::Base:0x24bad00>) on line #3 of app/views/vehicles/edit.html.erb:
+1: <h1>Editing vehicle</h1>
+2: 
+3: <% form_for(@vehicle) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/vehicles/edit.html.erb:3
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (174.0ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:56:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;35;1mTruck Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 60ms (View: 29, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:56:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;36;1mTruck Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 65ms (View: 34, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:57:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;35;1mTruck Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (undefined method `sticker_information' for #<Hash:0x24fa874>) on line #21 of app/views/vehicles/edit.html.erb:
+18: 	 <h2>Sticker Information</h2>
+19: 	<p>
+20: 		<%= f.label "Price" %><br />
+21: 		<%= text_field_tag "vehicle[metadata][sticker_information][price]", @vehicle.metadata.sticker_information.price %>
+22: 	</p>
+23: 
+24: 	<p>
+
+    app/views/vehicles/edit.html.erb:21
+    app/views/vehicles/edit.html.erb:3
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (100.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:57:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;36;1mTruck Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 85ms (View: 54, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:58:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #26 of app/views/vehicles/edit.html.erb:
+23: 
+24: 	<p>
+25: 		<%= f.label "Gas Mileage (City)" %><br />
+26: 		<%= text_field_tag "vehicle[metadata][sticker_information][gas_mileage][city]", @vehicle.metadata["sticker_information"]["mileage"]["city"] %>
+27: 	</p>
+28: 
+29: 	<p>
+
+    app/views/vehicles/edit.html.erb:26
+    app/views/vehicles/edit.html.erb:3
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (100.7ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:58:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (6.3ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 194ms (View: 159, DB: 8) | 200 OK [http://rails-metadata.dev/vehicles/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#update (for 127.0.0.1 at 2010-05-09 16:58:52) [PUT]
+  Parameters: {"truck"=>{"seat_count"=>"2", "color"=>"Black", "type"=>"Truck"}, "commit"=>"Update", "vehicle"=>{"metadata"=>{"sticker_information"=>{"price"=>"12000", "gas_mileage"=>{"city"=>"30", "highway"=>"20"}}}}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0=", "id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTruck Update (0.3ms)[0m   [0mUPDATE `vehicles` SET `updated_at` = '2010-05-09 20:58:52', `metadata` = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n <sticker-information>\n <price>12000</price>\n <gas-mileage>\n <city>30</city>\n <highway>20</highway>\n </gas-mileage>\n </sticker-information>\n</hash>\n' WHERE `id` = 1[0m
+  [4;36;1mSQL (17.7ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (undefined method `truck_url' for #<VehiclesController:0x2645814>):
+  app/controllers/vehicles_controller.rb:65:in `update'
+  app/controllers/vehicles_controller.rb:62:in `update'
+  passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (95.2ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#update (for 127.0.0.1 at 2010-05-09 16:59:20) [PUT]
+  Parameters: {"truck"=>{"seat_count"=>"2", "color"=>"Black", "type"=>"Truck"}, "commit"=>"Update", "vehicle"=>{"metadata"=>{"sticker_information"=>{"price"=>"12000", "gas_mileage"=>{"city"=>"30", "highway"=>"20"}}}}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0=", "id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.6ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/1
+Completed in 44ms (DB: 4) | 302 Found [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:59:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;36;1mTruck Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 95ms (View: 64, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#edit (for 127.0.0.1 at 2010-05-09 16:59:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/edit
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 187ms (View: 156, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#update (for 127.0.0.1 at 2010-05-09 16:59:32) [PUT]
+  Parameters: {"truck"=>{"seat_count"=>"2", "color"=>"Black", "type"=>"Truck"}, "commit"=>"Update", "vehicle"=>{"metadata"=>{"sticker_information"=>{"price"=>"12250", "gas_mileage"=>{"city"=>"30", "highway"=>"20"}}}}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0=", "id"=>"1"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mTruck Update (0.3ms)[0m   [0;1mUPDATE `vehicles` SET `updated_at` = '2010-05-09 20:59:32', `metadata` = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n <sticker-information>\n <price>12250</price>\n <gas-mileage>\n <city>30</city>\n <highway>20</highway>\n </gas-mileage>\n </sticker-information>\n</hash>\n' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/1
+Completed in 43ms (DB: 5) | 302 Found [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:59:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;36;1mTruck Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 96ms (View: 64, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:59:35) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mTruck Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 86ms (View: 55, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#destroy (for 127.0.0.1 at 2010-05-09 16:59:42) [DELETE]
+  Parameters: {"authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0=", "id"=>"1"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mTruck Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mTruck Destroy (11.3ms)[0m   [0;1mDELETE FROM `vehicles` WHERE `id` = 1[0m
+  [4;35;1mSQL (18.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles
+Completed in 67ms (DB: 35) | 302 Found [http://rails-metadata.dev/vehicles/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 16:59:42) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 16:59:43) [GET]
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 51ms (View: 31, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#create (for 127.0.0.1 at 2010-05-09 16:59:58) [POST]
+  Parameters: {"commit"=>"Create", "vehicle"=>{"seat_count"=>"2", "metadata"=>{"sticker_information"=>{"price"=>"120000", "gas_mileage"=>{"city"=>"12", "highway"=>"19"}}}, "color"=>"Red", "vehicle_type"=>"Car"}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0="}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVehicle Create (0.3ms)[0m   [0;1mINSERT INTO `vehicles` (`seat_count`, `created_at`, `updated_at`, `metadata`, `color`, `type`) VALUES(2, '2010-05-09 20:59:58', '2010-05-09 20:59:58', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n <sticker-information>\n <price>120000</price>\n <gas-mileage>\n <city>12</city>\n <highway>19</highway>\n </gas-mileage>\n </sticker-information>\n</hash>\n', 'Red', 'Car')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/2
+Completed in 32ms (DB: 3) | 302 Found [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 16:59:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 2) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;36;1mCar Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 117ms (View: 66, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 17:00:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+  [4;36;1mVehicle Load (0.2ms)[0m   [0;1mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 2) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+  [4;35;1mCar Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 165ms (View: 134, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles/2]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:00:59) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mCar Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 46ms (View: 15, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:01:00) [GET]
+  [4;35;1mVehicle Load (0.3ms)[0m   [0mSELECT * FROM `vehicles` [0m
+  [4;36;1mVehicle Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mCar Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 47ms (View: 16, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 17:01:02) [GET]
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 40ms (View: 19, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#new (for 127.0.0.1 at 2010-05-09 17:01:20) [GET]
+  [4;35;1mVehicle Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/new
+Completed in 51ms (View: 30, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#create (for 127.0.0.1 at 2010-05-09 17:01:40) [POST]
+  Parameters: {"commit"=>"Create", "vehicle"=>{"seat_count"=>"5", "metadata"=>{"sticker_information"=>{"price"=>"30000", "gas_mileage"=>{"city"=>"10", "highway"=>"15"}}}, "color"=>"Black", "type"=>"Truck"}, "authenticity_token"=>"ULurek1cBPyfxhDo+WkNtWe2yQPpF0Nvnw89dbURfC0="}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+WARNING: Can't mass-assign these protected attributes: type
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVehicle Create (0.3ms)[0m   [0;1mINSERT INTO `vehicles` (`seat_count`, `created_at`, `updated_at`, `metadata`, `color`, `type`) VALUES(5, '2010-05-09 21:01:40', '2010-05-09 21:01:40', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<hash>\n <sticker-information>\n <price>30000</price>\n <gas-mileage>\n <city>10</city>\n <highway>15</highway>\n </gas-mileage>\n </sticker-information>\n</hash>\n', 'Black', NULL)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Redirected to http://rails-metadata.dev/vehicles/3
+Completed in 31ms (DB: 3) | 302 Found [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 17:01:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 3) [0m
+Rendering template within layouts/vehicles
+Rendering vehicles/show
+Completed in 85ms (View: 63, DB: 2) | 200 OK [http://rails-metadata.dev/vehicles/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#show (for 127.0.0.1 at 2010-05-09 17:02:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mVehicle Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+  [4;35;1mVehicle Load (0.2ms)[0m   [0mSELECT * FROM `vehicles` WHERE (`vehicles`.`id` = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Vehicle with ID=3):
+  app/controllers/vehicles_controller.rb:16:in `show'
+  passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (158.3ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:02:12) [GET]
+  [4;36;1mVehicle Load (0.3ms)[0m   [0;1mSELECT * FROM `vehicles` [0m
+  [4;35;1mVehicle Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mCar Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Completed in 47ms (View: 16, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:09:00) [GET]
+  [4;35;1mVehicle Load (0.0ms)[0m   [0mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer [11]) AS price
+ FROM vehicles
+ WHERE price < 10000' at line 1: SELECT CAST(ExtractValue(metadata, '/hash/sticker_information/price') AS integer [11]) AS price
+ FROM vehicles
+ WHERE price < 10000[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'integer [11]) AS price
+       FROM vehicles
+       WHERE price < 10000' at line 1: SELECT CAST(ExtractValue(metadata, '/hash/sticker_information/price') AS integer [11]) AS price
+       FROM vehicles
+       WHERE price < 10000):
+  app/controllers/vehicles_controller.rb:5:in `index'
+  passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (90.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:11:01) [GET]
+  [4;36;1mVehicle Load (0.0ms)[0m   [0;1mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(metadata, '/hash/sticker_information/price') AS price
+ FROM vehicles
+ ' at line 1: SELECT SIGNED ExtractValue(metadata, '/hash/sticker_information/price') AS price
+ FROM vehicles
+ WHERE price < '10000'[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(metadata, '/hash/sticker_information/price') AS price
+       FROM vehicles
+    ' at line 1: SELECT SIGNED ExtractValue(metadata, '/hash/sticker_information/price') AS price
+       FROM vehicles
+       WHERE price < '10000'):
+  app/controllers/vehicles_controller.rb:5:in `index'
+  passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (90.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:14:32) [GET]
+  [4;35;1mVehicle Load (67.4ms)[0m   [0mSELECT CONVERT(ExtractValue(metadata, '/hash/sticker_information/price'), SIGNED) AS price
+ FROM vehicles
+ HAVING price < 10000[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;36;1mVehicle Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+
+ActionView::TemplateError (missing attribute: color) on line #14 of app/views/vehicles/index.html.erb:
+11: <% @vehicles.each do |vehicle| %>
+12:   <tr>
+13:     <td><%=h vehicle.type %></td>
+14:     <td><%=h vehicle.color %></td>
+15:     <td><%=h vehicle.seat_count %></td>
+16:     <td><%= link_to 'Show', vehicle_path(vehicle) %></td>
+17:     <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+
+    app/views/vehicles/index.html.erb:14
+    app/views/vehicles/index.html.erb:11:in `each'
+    app/views/vehicles/index.html.erb:11
+    app/controllers/vehicles_controller.rb:10:in `index'
+    passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+    passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+    passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+    passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (112.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:14:43) [GET]
+  [4;35;1mVehicle Load (0.4ms)[0m   [0mSELECT *, CONVERT(ExtractValue(metadata, '/hash/sticker_information/price'), SIGNED) AS price
+ FROM vehicles
+ HAVING price < 10000[0m
+  [4;36;1mVehicle Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mCar Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 46ms (View: 16, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:16:32) [GET]
+  [4;36;1mVehicle Load (0.0ms)[0m   [0;1mMysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3: SELECT *
+ FROM vehicles
+ HAVING CONVERT(ExtractValue(metadata, '/hash/sticker_information/price'), SIGNED) < 10000[0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3: SELECT *
+      FROM vehicles
+      HAVING CONVERT(ExtractValue(metadata, '/hash/sticker_information/price'), SIGNED) < 10000):
+  app/controllers/vehicles_controller.rb:5:in `index'
+  passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (90.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-09 17:20:37) [GET]
+
+SyntaxError (/Users/emily/Sites/rails-metadata/app/controllers/vehicles_controller.rb:6: syntax error, unexpected tSTRING_BEG, expecting kDO or '{' or '('
+...ash/sticker-information/price") AS SIGNED) AS price 
+                              ^
+/Users/emily/Sites/rails-metadata/app/controllers/vehicles_controller.rb:8: syntax error, unexpected ')', expecting kEND):
+  passenger (2.2.9) lib/phusion_passenger/rack/request_handler.rb:92:in `process_request'
+  passenger (2.2.9) lib/phusion_passenger/abstract_request_handler.rb:207:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:400:in `start_request_handler'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:351:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/utils.rb:184:in `safe_fork'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:349:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:163:in `start'
+  passenger (2.2.9) lib/phusion_passenger/railz/application_spawner.rb:209:in `start'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:262:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:126:in `lookup_or_add'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:256:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:80:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server_collection.rb:79:in `synchronize'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:255:in `spawn_rails_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:154:in `spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/spawn_manager.rb:287:in `handle_spawn_application'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `__send__'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:352:in `main_loop'
+  passenger (2.2.9) lib/phusion_passenger/abstract_server.rb:196:in `start_synchronously'
+
+Rendered rescues/_trace (146.1ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:20:50) [GET]
+  [4;35;1mVehicle Load (0.4ms)[0m   [0mSELECT *, CAST(ExtractValue(metadata, '/hash/sticker-information/price') AS SIGNED) AS price 
+ FROM vehicles 
+ HAVING price > 10000[0m
+  [4;36;1mVehicle Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `vehicles`[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+  [4;35;1mCar Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `vehicles`[0m
+Completed in 46ms (View: 15, DB: 4) | 200 OK [http://rails-metadata.dev/vehicles]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VehiclesController#index (for 127.0.0.1 at 2010-05-09 17:20:59) [GET]
+  [4;36;1mVehicle Load (0.4ms)[0m   [0;1mSELECT *, CAST(ExtractValue(metadata, '/hash/sticker-information/price') AS SIGNED) AS price 
+ FROM vehicles 
+ HAVING price < 10000[0m
+Rendering template within layouts/vehicles
+Rendering vehicles/index
+Completed in 22ms (View: 3, DB: 1) | 200 OK [http://rails-metadata.dev/vehicles]
